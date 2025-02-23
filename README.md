@@ -14,20 +14,20 @@ Mở terminal chạy:
     sudo apt update
     sudo apt install docker.io -y
 
-![img](0)
+![img](https://github.com/DucThinh47/Docker-Tutorial/blob/main/images/image.png?raw=true)
 
 Sau khi cài đặt xong, khởi động Docker:
 
     sudo systemctl start docker
     sudo systemctl enable docker
 
-![img](1)
+![img](https://github.com/DucThinh47/Docker-Tutorial/blob/main/images/image1.png?raw=true)
 
 Kiểm tra xem Docker đã hoạt động chưa:
 
     sudo docker --version
 
-![img](2)
+![img](https://github.com/DucThinh47/Docker-Tutorial/blob/main/images/image2.png?raw=true)
 
 => Docker đã hoạt động.
 
@@ -47,7 +47,7 @@ Giải thích:
 
 - ***bash***: Chạy shell bên trong container.
 
-![img](3)
+![img](https://github.com/DucThinh47/Docker-Tutorial/blob/main/images/image3.png?raw=true)
 
 => Chạy thành công container Ubuntu!
 
@@ -63,29 +63,29 @@ Thoát khỏi container bằng lệnh:
 
     Ví dụ, chạy container Ubuntu: 
 
-    ![img](4)
+    ![img](https://github.com/DucThinh47/Docker-Tutorial/blob/main/images/image4.png?raw=true)
 
     Xem danh sách container đang chạy: 
 
-    ![img](5)
+    ![img](https://github.com/DucThinh47/Docker-Tutorial/blob/main/images/image5.png?raw=true)
 
 - Xem tất cả container (kể cả đã dừng):
 
         sudo docker ps -a
 
-    ![img](6)
+    ![img](https://github.com/DucThinh47/Docker-Tutorial/blob/main/images/image6.png?raw=true)
 
 - Xóa container:
 
         sudo docker rm <container_id>
     
-    ![img](7)
+    ![img](https://github.com/DucThinh47/Docker-Tutorial/blob/main/images/image7.png?raw=true)
 
 - Xóa image không sử dụng:
 
         sudo docker image prune -a
     
-    ![img](8)
+    ![img](https://github.com/DucThinh47/Docker-Tutorial/blob/main/images/image8.png?raw=true)
 
 4. **Hiểu về Docker Images và Containers**
 
@@ -190,17 +190,17 @@ Ví dụ, tạo một image Ubuntu có sẵn ***net-tools***:
 
     1. Tạo thư mục làm việc mới: 
 
-        ![img](9)
+        ![img](https://github.com/DucThinh47/Docker-Tutorial/blob/main/images/image9.png?raw=true)
     
     2. Tạo file ***Dockerfile***:
 
             nano Dockerfile
         
-        ![img](10)
+        ![img](https://github.com/DucThinh47/Docker-Tutorial/blob/main/images/image10.png?raw=true)
     
     3. Viết nội dung file: 
 
-        ![img](11)
+        ![img](https://github.com/DucThinh47/Docker-Tutorial/blob/main/images/image11.png?raw=true)
     
     4. Lưu và đóng file
 
@@ -216,7 +216,7 @@ Ví dụ, tạo một image Ubuntu có sẵn ***net-tools***:
 
             - ***.***: Chỉ định thư mục hiện tại (nơi chứa Dockerfile).
 
-            ![img](12)
+            ![img](https://github.com/DucThinh47/Docker-Tutorial/blob/main/images/image12.png?raw=true)
 
         - Docker sẽ thực hiện các bước trong Dockerfile:
 
@@ -230,7 +230,7 @@ Ví dụ, tạo một image Ubuntu có sẵn ***net-tools***:
 
                 sudo docker images
             
-            ![img](13)
+            ![img](https://github.com/DucThinh47/Docker-Tutorial/blob/main/images/image13.png?raw=true)
 
 - Chạy container từ image
 
@@ -244,7 +244,7 @@ Ví dụ, tạo một image Ubuntu có sẵn ***net-tools***:
     
     - Khi container khởi động, sẽ thấy dòng lệnh của Ubuntu (vì CMD ["bash"] trong Dockerfile đã thiết lập lệnh mặc định là bash).
 
-    ![img](14)
+    ![img](https://github.com/DucThinh47/Docker-Tutorial/blob/main/images/image14.png?raw=true)
 
 6. **Docker Volumes (Lưu dữ liệu giữa các container)**
 
@@ -262,7 +262,7 @@ Lab thường sẽ cần nhiều container giao tiếp với nhau. Docker có th
     sudo docker network create my_network
     sudo docker run -it --network=my_network --name=ubuntu1 ubuntu bash
     sudo docker run -it --network=my_network --name=ubuntu2 ubuntu bash
-    
+
 Bây giờ, ubuntu1 và ubuntu2 có thể ping nhau bằng tên container.
 
 
